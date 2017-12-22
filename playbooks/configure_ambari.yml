@@ -1,0 +1,10 @@
+---
+- include: "set_variables.yml"
+- hosts: hadoop-cluster
+  gather_facts: true
+- name: Apply the ambari-config role to the ambari-server group
+  hosts: ambari-server
+  any_errors_fatal: true
+  become: yes
+  roles:
+    - ambari-config

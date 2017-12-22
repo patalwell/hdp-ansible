@@ -1,0 +1,28 @@
+---
+cloud_config:
+  name_suffix: 'patHDP'
+  zone: SE
+  admin_username: centos
+  ssh:
+    keyname: field
+    privatekey: ~/AWSKeys/field.pem
+
+nodes:
+  - role: "hdp-master"
+    count: 1
+    image: CentOS 7.2
+    flavor: m3.xlarge
+    public_ip: true
+    ambari_server: true
+
+  - role: "hdp-slave"
+    count: 4
+    image: CentOS 7.2
+    flavor: m3.xlarge
+    public_ip: true
+
+  - role: "hdp-edge"
+    count: 0
+    image: CentOS 7.2
+    flavor: m3.medium
+    public_ip: false
