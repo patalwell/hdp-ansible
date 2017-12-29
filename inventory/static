@@ -1,0 +1,7 @@
+#group_var-role
+[hdp-master]
+pathdp1.field.hortonworks.com ansible_host=pathdp1.field.hortonworks.com ansible_user=centos ansible_ssh_private_key_file=~/example.pem ambari_server=true
+[hdp-slave]
+pathdp2.field.hortonworks.com ansible_host=pathdp2.field.hortonworks.com ansible_user=centos ansible_ssh_private_key_file=~/example.pem
+pathdp3.field.hortonworks.com ansible_host=pathdp3.field.hortonworks.com ansible_user=centos ansible_ssh_private_key_file=~/example.pem
+pathdp4.field.hortonworks.com ansible_host=pathdp4.field.hortonworks.com ansible_user=centos ansible_ssh_private_key_file=~/example.pem
